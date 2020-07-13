@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 import intro.urls
 from . import views
+import posts.urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('intro/', include ('intro.urls')),
     path('', views.main, name="main"),
     path('book/', views.book, name="book"),
+    path('posts/', include('posts.urls')),
 ]
