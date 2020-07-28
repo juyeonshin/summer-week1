@@ -26,4 +26,5 @@ urlpatterns = [
     path('', views.main, name="main"),
     path('book/', views.book, name="book"),
     path('posts/', include('posts.urls')),
+    path('accounts/', include('allauth.urls')),
 ]

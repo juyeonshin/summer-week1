@@ -8,7 +8,8 @@ def create(request):
     if request.method == "POST":
         title = request.POST.get('title')
         content = request.POST.get('content')
-        Post.objects.create(title=title,content=content)
+        user= request.user
+        Post.objects.create(title=title,content=content, image=image, user=user)
         
         return redirect('posts:main')
 
