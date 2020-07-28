@@ -128,6 +128,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'week1', 'static')
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'myblog', 'media')
+
+
 AUTHENTICATION_BACKENDS =[
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',

@@ -18,6 +18,8 @@ from django.urls import path, include
 import intro.urls
 from . import views
 import posts.urls
+from django.conf import settings 
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -28,3 +30,4 @@ urlpatterns = [
     path('posts/', include('posts.urls')),
     path('accounts/', include('allauth.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
